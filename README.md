@@ -8,8 +8,9 @@
 
 # Instructions 
 Use this to run project
-    $ sudo docker-compose build app  
-    $ sudo docker-compose up
+
+-$ sudo docker-compose build app  
+-$ sudo docker-compose up
 
 
 # How can I help you?
