@@ -15,5 +15,8 @@ Use this to run project
 
 # How can I help you?
  Ngix travellist.conf - Stay identical to yii's tutorial
+
  Dockerfile           - Install all requirements Yii
+ 
  Issue                - Report bugs and strange things
+
