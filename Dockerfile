@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php:7.4.16-fpm-buster
 ARG uid=1000
 ARG user=sanonichan
 RUN apt-get update && apt-get install -y \
