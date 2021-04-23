@@ -1,4 +1,11 @@
 version: '3.7'
+networks:
+  travellist:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/24
 
 services: 
   nginx:
@@ -11,7 +18,8 @@ services:
      - ./:/var/www
      - ./docker-compose/nginx:/etc/nginx/conf.d
     networks: 
-        - travellist
+        travellist:
+          ipv4_address: 172.20.0.6
   app:
     build: 
       args:
@@ -26,7 +34,8 @@ services:
     volumes: 
       - ./:/var/www
     networks: 
-         - travellist
+         travellist:
+          ipv4_address: 172.20.0.7
   db:
     image: mysql:8
     container_name: travellist-db
@@ -41,10 +50,10 @@ services:
     volumes: 
         - ./docker-compose/mysql:/docker-entrypoint-initdb.d
     networks: 
-        - travellist
+        travellist:
+          ipv4_address: 172.20.0.8
 
 
-networks:
-  travellist:
-    driver: bridge
+
       
+          
